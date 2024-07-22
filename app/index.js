@@ -1,6 +1,3 @@
-
-
-
 import "dotenv/config";
 import fetch from "node-fetch";
 import Fastify from "fastify";
@@ -65,16 +62,18 @@ fastify.get("/", async function handler(request, reply) {
     },
   });
 
+  console.log("Export: File downloaded");
+
   if (!fileResponse.ok) {
     reply.code(500).send({ error: `Failed to download file: ${fileResponse.statusText}` });
     return;
   }
 
   // Set the appropriate headers for a zip file
-  reply.header('Content-Type', 'application/zip');
-  reply.header('Content-Disposition', 'attachment; filename="backupFile.zip"');
+  // reply.header('Content-Type', 'application/zip');
+  // reply.header('Content-Disposition', 'attachment; filename="backupFile.zip"');
 
-  console.log(fileResponse.body);
+  // console.log(fileResponse.body);
 
 await pump(fileResponse.body, reply.raw).catch(err => {
     fastify.log.error(err);
