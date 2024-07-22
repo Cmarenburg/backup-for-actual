@@ -13,3 +13,7 @@ Important env variables are
 |ACTUAL_INSTANCE_URL	|  instance url 	|   null	|
 |  ACTUAL_INSTANCE_PASSWORD	|  instance pass 	|  null 	|
 | ACTUAL_BUDGET_ID | Instance budget id | null |
+| S3_ACCOUNT_ID| | |
+|S3_ACCESS_KEY_ID| | |
+|S3_ECRET_ACCESS_KEY| | |
+|S3_BUCKET_NAME| | |
