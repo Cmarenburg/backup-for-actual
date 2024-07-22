@@ -2,10 +2,10 @@
   "name": "download-for-actual",
   "version": "1.0.0",
   "description": "Creates a backup for your actual instance and returns a file",
-  "main": "index.js",
+  "main": "app/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js"
+    "start": "node app/index.js"
   },
   "author": "Colin Arenburg",
   "license": "ISC",
