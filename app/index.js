@@ -48,8 +48,6 @@ fastify.get("/", async function handler(request, reply) {
     }
   );
 
-  console.log("QUERY sun", request.query.sun);
-
   if (!tokenResponse.ok) {
     reply.code(500).send({ error: "Failed to authenticate with the backend" });
     return;
@@ -116,8 +114,8 @@ fastify.get("/", async function handler(request, reply) {
     const dateStr = `${year}-${month}-${day}`;
     // if time is between 6am and 6pm then sunrise else sunset
 
-    if(request.query.sun) {
-      return `${request.query.sun}-${dateStr}.zip`;
+    if(request.query.name) {
+      return `${request.query.name}-${dateStr}.zip`;
     }
 
     if (hours >= 6 && hours < 18) {
