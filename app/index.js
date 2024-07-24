@@ -16,8 +16,8 @@ import { Upload } from "@aws-sdk/lib-storage";
 const pump = util.promisify(pipeline);
 
 const S3 = new S3Client({
-  region: "auto",
-  endpoint: `https://${process.env.S3_ACCOUNT_ID}.r2.cloudflarestorage.com`,
+  region: process.env.S3_REGION,
+  endpoint: process.env.S3_ENDPOINT,
   credentials: {
     accessKeyId: process.env.S3_ACCESS_KEY_ID,
     secretAccessKey: process.env.S3_ECRET_ACCESS_KEY,
