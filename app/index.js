@@ -136,7 +136,7 @@ fastify.get("/", async function handler(request, reply) {
     const upload =  new Upload({
       client: new S3Client({
         region: "auto",
-        endpoint: `https://${process.env.S3_ACCOUNT_ID}.r2.cloudflarestorage.com`,
+        endpoint: process.env.S3_ENDPOINT,
         credentials: {
           accessKeyId: process.env.S3_ACCESS_KEY_ID,
           secretAccessKey: process.env.S3_ECRET_ACCESS_KEY,
