@@ -20,7 +20,7 @@ const S3 = new S3Client({
   endpoint: process.env.S3_ENDPOINT,
   credentials: {
     accessKeyId: process.env.S3_ACCESS_KEY_ID,
-    secretAccessKey: process.env.S3_ECRET_ACCESS_KEY,
+    secretAccessKey: process.env.S3_SECRET_ACCESS_KEY,
   },
 });
 
@@ -139,7 +139,7 @@ fastify.get("/", async function handler(request, reply) {
         endpoint: process.env.S3_ENDPOINT,
         credentials: {
           accessKeyId: process.env.S3_ACCESS_KEY_ID,
-          secretAccessKey: process.env.S3_ECRET_ACCESS_KEY,
+          secretAccessKey: process.env.S3_SECRET_ACCESS_KEY,
         },
       }),
       params: uploadParams,
