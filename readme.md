@@ -10,6 +10,8 @@ A name can be provided via a `name` query param. The name will be prepended to a
 
 Important env variables are 
 
+Important: I still need to make tests etc for this. This is still very much a WIP but does do it's job
+
 |Item	|Desc   |Default|
 |---	|---	|---	|
 |AUTH_TOKEN   	|  API auth 	|   your_auth_token	|
